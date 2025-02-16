@@ -139,7 +139,7 @@ def hapus_stok():
 
                 clear_terminal()
                 print("\n✅ Produk berhasil dihapus!")
-                print(tabulate(stokBarang, headers="keys", tablefmt="fancy_grid"))
+                show_table_data(stokBarang)
                 input("\nTekan Enter untuk kembali ke sub-menu...")
 
             elif pilihan == "2":
@@ -232,7 +232,7 @@ def sub_menu_update_stok():
     while True:
         clear_terminal()
         print("\n📝 Sub Menu Update Stok Barang")
-        print(tabulate(stokBarang, headers="keys", tablefmt="fancy_grid"))
+        show_table_data(stokBarang)
         kode = input("\nMasukkan Kode Produk yang ingin diupdate (atau ketik 'batal' untuk kembali): ").strip().upper()
         if kode.lower() == 'batal':
             break
